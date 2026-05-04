@@ -1,11 +1,11 @@
 # List of words used for the Hangman game
-WORDS = [___]
+WORDS = ["brontosaurus", "triceratops", "diplodocus", "stegosaurus", "tyrannosaurus", "allosaurus", "supersaurus", "hadrosaurus"]
 
 # Symbol used to represent hidden letters
 HIDDEN_SYMBOL = "_"
 
 # Maximum number of incorrect guesses allowed
-MAX_GUESSES = ___
+MAX_GUESSES = 13
 
 
 def main():
