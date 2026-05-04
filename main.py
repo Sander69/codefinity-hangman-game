@@ -63,10 +63,85 @@ def show_possible_matches(pattern):
 
 
 
+
+import os  # Importing os for clearing the console
+
+# Clear the console
+os.system("cls" if os.name == "nt" else "clear")
+
+
+
 def main():
-    # Entry point for the game
-    pass
+    secret_word = choose_word_random()
+    guessed_letters = []
+    # Example call to build and display the masked word
+    masked = get_guessed_word(secret_word, guessed_letters)
+    return True
 
+    print('Alphabet:\t\t', alphabet)
+    print("Word to guess:", masked)
+    print('Remaining letters:\t', remaining)
 
-if __name__ == "__main__":
-    main()
+def hangman(secret_word):
+    guessed_letters = []
+    mistakes = 0
+    stages = [
+    """
+       -----
+       |   |
+           |
+           |
+           |
+           |
+    """,
+    """
+       -----
+       |   |
+       O   |
+           |
+           |
+           |
+    """,
+    """
+       -----
+       |   |
+       O   |
+       |   |
+           |
+           |
+    """,
+    """
+       -----
+       |   |
+       O   |
+      /|   |
+           |
+           |
+    """,
+    """
+       -----
+       |   |
+       O   |
+      /|\\  |
+           |
+           |
+    """,
+    """
+       -----
+       |   |
+       O   |
+      /|\\  |
+      /    |
+           |
+    """,
+    """
+       -----
+       |   |
+       O   |
+      /|\\  |
+      / \\  |
+           |
+    """
+]
+    while guessed_letters in word or mistakes != MAX_ATTEMPTS:
+        
